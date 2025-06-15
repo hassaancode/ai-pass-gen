@@ -101,13 +101,13 @@ export function PasswordListItem({ password }: PasswordListItemProps) {
         size="icon"
         onClick={handleCopy}
         aria-label={copied ? "Password copied to clipboard" : "Copy password to clipboard"}
-        className="text-accent-foreground hover:text-primary transition-colors duration-150 flex-shrink-0 ml-2"
+        className="group hover:bg-neutral-300/30 transition-colors duration-150 flex-shrink-0 ml-2"
         title={copied ? "Copied!" : "Copy password"}
       >
         {copied ? (
           <Check className="h-5 w-5 text-green-600 transform scale-110 transition-transform duration-200" />
         ) : (
-          <Clipboard className="h-5 w-5 text-black" />
+          <Clipboard className="h-5 w-5  text-black" />
         )}
       </Button>
     </li>
