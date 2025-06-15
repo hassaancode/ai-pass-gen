@@ -107,7 +107,7 @@ export function PasswordListItem({ password }: PasswordListItemProps) {
         {copied ? (
           <Check className="h-5 w-5 text-green-600 transform scale-110 transition-transform duration-200" />
         ) : (
-          <Clipboard className="h-5 w-5" />
+          <Clipboard className="h-5 w-5 text-black" />
         )}
       </Button>
     </li>
