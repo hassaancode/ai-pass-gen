@@ -1,4 +1,6 @@
-# Firebase Studio
+# AI Password Generator Tool
+
+##preview
 
 This is a NextJS starter in Firebase Studio.
 
