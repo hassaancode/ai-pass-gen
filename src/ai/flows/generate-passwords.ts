@@ -37,9 +37,18 @@ const prompt = ai.definePrompt({
   prompt: `You are a password generator expert. Generate {{numberOfPasswords}} secure passwords based on the following criteria:
 
 Password Length: {{passwordLength}}
-Custom Characters: {{#if customCharacters}}{{customCharacters}}{{else}}abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*(){{/if}}
 
-Ensure each password meets the length requirement and includes characters from the provided set. Return the passwords as a JSON array. Do not include any additional text or explanations.`, 
+Ensure at least two of the generated passwords are "strong". A strong password must incorporate a mix of uppercase letters (A-Z), lowercase letters (a-z), numbers (0-9), and symbols (e.g., !@#$%^&*()).
+
+Custom Characters:
+{{#if customCharacters}}
+Use these custom characters for all passwords: {{customCharacters}}
+{{else}}
+For passwords not designated as "strong", and to supplement characters for "strong" passwords if needed, use a diverse and randomized selection of characters from the following comprehensive set: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;':",./<>?
+{{/if}}
+
+Ensure each password meets the length requirement.
+Return the passwords as a JSON array. Do not include any additional text or explanations.`,
 });
 
 const generatePasswordsFlow = ai.defineFlow(
