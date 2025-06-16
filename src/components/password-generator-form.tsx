@@ -93,7 +93,7 @@ export function PasswordGeneratorForm({
                   <FormControl>
                     <Input
                       id="customChars"
-                      placeholder="e.g., !@#$%^&*"
+                      placeholder="e.g. John Doe"
                       {...field}
                       disabled={isLoading}
                       className="font-code"
