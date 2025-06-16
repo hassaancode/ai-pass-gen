@@ -42,7 +42,7 @@ Ensure at least two of the generated passwords are "strong". A strong password m
 
 Custom Characters:
 {{#if customCharacters}}
-Use these custom characters for all passwords: {{customCharacters}}
+Use these custom characters for all passwords: {{customCharacters}} and randomize it with special characters. example: if{{customCharacters}} is gamerzlife47ever, then return something like g@m3rZ#47_ever
 {{else}}
 For passwords not designated as "strong", and to supplement characters for "strong" passwords if needed, use a diverse and randomized selection of characters from the following comprehensive set: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;':",./<>?
 {{/if}}
